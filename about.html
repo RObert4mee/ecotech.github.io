@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoTech Solutions - About</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for the team member cards */
+        .team {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+            gap: 20px;
+            margin: 20px auto;
+            justify-content: center; /* Centering the team member cards */
+            text-align: center;
+            max-width: 1200px; /* Limit the width of the team section */
+        }
+
+        .team-member {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative; /* Ensure it doesn't overlap with other elements */
+            width: 100%;
+        }
+
+        /* Ensures the footer is always at the bottom */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        main {
+            flex: 1; /* Allow the main content to take up available space */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">EcoTech Solutions</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="about">
+            <img src="images/img3.jpg" alt="About EcoTech Solutions" style="width: 100%; height: auto; max-height: 400px; object-fit: cover;">
+            <h1>About Us</h1>
+            <p>EcoTech Solutions is a forward-thinking company dedicated to providing sustainable technology solutions for residential and commercial clients. Our mission is to promote eco-friendly practices through innovative technology, helping our clients reduce their carbon footprint while enhancing their quality of life.</p>
+            <h2>Our Team</h2>
+            <p>Meet the passionate individuals behind EcoTech Solutions who are committed to making a difference.</p>
+            <div class="team">
+                <div class="team-member">
+                    <img src="images/img6.jpg" alt="John Smith">
+                    <h3>John Smith</h3>
+                    <p>CEO</p>
+                </div>
+                <div class="team-member">
+                    <img src="images/img7.jpg" alt="Jane Doe">
+                    <h3>Jane Doe</h3>
+                    <p>CTO</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 EcoTech Solutions. All rights reserved.</p>
+    </footer>
+</body>
+</html>

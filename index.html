@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoTech Solutions - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for the cards and testimonials */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .service-card {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .testimonials {
+            background-color: #f4f4f4;
+            padding: 20px;
+            margin-top: 20px;
+            position: relative;
+            overflow: hidden;
+            max-height: 200px;
+        }
+
+        .testimonial-content {
+            position: relative; /* Changed from absolute to relative */
+            transition: transform 0.5s ease;
+            width: 100%;
+        }
+
+        .testimonial {
+            display: none;
+        }
+
+        .testimonial.active {
+            display: block;
+        }
+
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative; /* Changed to relative */
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">EcoTech Solutions</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <img src="images/img1.webp" alt="EcoTech Solutions Hero Image">
+            <h1>Welcome to EcoTech Solutions</h1>
+            <p>Your partner in sustainable technology solutions.</p>
+            <a href="contact.html" class="cta-button">Get in Touch</a>
+        </section>
+        <section class="services">
+            <h2>Our Services</h2>
+            <div class="service-card">Solar Panel Installation</div>
+            <div class="service-card">Energy-Efficient Appliances</div>
+            <div class="service-card">Smart Home Systems</div>
+            <div class="service-card">Waste Management Solutions</div>
+        </section>
+        <div>
+            <img src="images/img2.jpg" alt="image 2"/>
+        </div>
+        <section class="testimonials">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonial-content">
+                <div class="testimonial active">
+                    <blockquote>
+                        <p>"EcoTech Solutions transformed our home into a sustainable haven. Highly recommended!"</p>
+                        <footer>- Jane Doe</footer>
+                    </blockquote>
+                </div>
+                <div class="testimonial">
+                    <blockquote>
+                        <p>"Their team was professional and knowledgeable. We love our new solar panels!"</p>
+                        <footer>- John Smith</footer>
+                    </blockquote>
+                </div>
+                <div class="testimonial">
+                    <blockquote>
+                        <p>"Amazing service! Our energy bills have never been lower."</p>
+                        <footer>- Sarah Johnson</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 EcoTech Solutions. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for sliding testimonials
+        let currentTestimonial = 0;
+        const testimonials = document.querySelectorAll('.testimonial');
+        
+        function showNextTestimonial() {
+            testimonials[currentTestimonial].classList.remove('active');
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            testimonials[currentTestimonial].classList.add('active');
+        }
+        
+        setInterval(showNextTestimonial, 3000); // Change testimonial every 3 seconds
+    </script>
+</body>
+</html>
